@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC1E6535-5641-446D-ADD6-695B5C6CB501}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MakeExamsEasyAgain</RootNamespace>
+    <AssemblyName>MakeExamsEasyAgain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Robert\Documents\ExamTool\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Final Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DDC55BE4F1E4062177C0D50984D6B63E0C326D30</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MakeExamsEasyAgain_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\..\Downloads\PDFToText_bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Pri.LongPath, Version=2.0.53.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pri.LongPath.2.0.53\lib\net45\Pri.LongPath.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpZipLib">
+      <HintPath>..\..\..\..\..\..\Downloads\PDFToText_bin\SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Portable, Version=18.1200.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Net.Core.18.1.0.53\lib\netstandard2.0\Syncfusion.Compression.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=18.1460.0.53, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.18.1.0.53\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Portable, Version=18.1200.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Pdf.Net.Core.18.1.0.53\lib\netstandard2.0\Syncfusion.Pdf.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.4.4.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Documents\Handouts\Dynamics\sdsg19_0_intro_nopause.pdf" />
+    <None Include="Documents\Handouts\Dynamics\sdsg19_1_orbits_nopause.pdf" />
+    <None Include="Documents\Handouts\Dynamics\sdsg19_2_poisson_nopause.pdf" />
+    <None Include="Documents\Handouts\Dynamics\sdsg19_3_circular_nopause.pdf" />
+    <None Include="Documents\Handouts\Dynamics\sdsg19_4_axi_nopause.pdf" />
+    <None Include="Documents\Handouts\Dynamics\sdsg19_5_coll_nopause.pdf" />
+    <None Include="Documents\Handouts\Dynamics\sdsg19_6_dfs_nopause.pdf" />
+    <None Include="Documents\Handouts\Dynamics\sdsg19_7_clusters_nopause.pdf" />
+    <None Include="Documents\Handouts\Dynamics\sdsg19_8_beyondnewton_nopause.pdf" />
+    <None Include="Documents\Handouts\Quantum\chap10.pdf" />
+    <None Include="Documents\Handouts\Quantum\chap2.pdf" />
+    <None Include="Documents\Handouts\Quantum\chap3.pdf" />
+    <None Include="Documents\Handouts\Quantum\chap4.pdf" />
+    <None Include="Documents\Handouts\Quantum\chap5.pdf" />
+    <None Include="Documents\Handouts\Quantum\chap6.pdf" />
+    <None Include="Documents\Handouts\Quantum\chap7.pdf" />
+    <None Include="Documents\Handouts\Quantum\chap8.pdf" />
+    <None Include="Documents\Handouts\Quantum\chap9.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_10__Classic_tests_of_General_Relativity.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_11__Schwarzschild_black_holes.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_12__Cosmology.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_1__Recap_of_special_relativity.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_2__Manifolds_and_coordinates.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_3__Vector_and_tensor_algebra.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_4__Vector_and_tensor.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_5__Minkowski_spacetime.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_6__Electromagnetism.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_7__Spacetime_curvature.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_8__The_gravitational_field_equations.pdf" />
+    <None Include="Documents\Handouts\Relativity\Topic_9__The_Schwarzschild_solution.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture01.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture02.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture03.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture04.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture05.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture06.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture07.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture08.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture09.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture10.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture11.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture12.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture13.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture14.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture15.pdf" />
+    <None Include="Documents\Handouts\Stars\Lecture16.pdf" />
+    <None Include="Documents\Handouts\Stat Phys\five.pdf" />
+    <None Include="Documents\Handouts\Stat Phys\four.pdf" />
+    <None Include="Documents\Handouts\Stat Phys\one.pdf" />
+    <None Include="Documents\Handouts\Stat Phys\three.pdf" />
+    <None Include="Documents\Handouts\Stat Phys\two.pdf" />
+    <None Include="Documents\Handouts\Topics\Lecture-01_TopicsinObeservationalPhysics.pdf" />
+    <None Include="Documents\Handouts\Topics\Lecture-02_TopicsinObservationalPhysics.pdf" />
+    <None Include="Documents\Handouts\Topics\Lecture-03_TopicsinObservationalPhysics.pdf" />
+    <None Include="Documents\Handouts\Topics\Lecture-04_TopicsinObeservationalAstrophysics.pdf" />
+    <None Include="Documents\Handouts\Topics\lecture-05_TopicsinObservationalAstrophysics.pdf" />
+    <None Include="Documents\Handouts\Topics\lecture-06_TopicsinObservationalAstrophysics.pdf" />
+    <None Include="Documents\Handouts\Topics\Lecture-07_TopicsinObservationalAstrophysics.pdf" />
+    <None Include="Documents\Handouts\Topics\Lecture-08_TopicsinObservationalAstrophysics.pdf" />
+    <None Include="Documents\Handouts\Topics\Lecture-09_TopicsinObservationalAstrophysics.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-10.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-11.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-12.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-13.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-14.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-15.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-16.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-17.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-18.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-19.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-20.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-21.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-22.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-23.pdf" />
+    <None Include="Documents\Handouts\Topics\Topics_Lecture-24.pdf" />
+    <None Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[013-066].pdf" />
+    <None Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[067-153].pdf" />
+    <None Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[154-285].pdf" />
+    <None Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[286-405].pdf" />
+    <None Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[406-467].pdf" />
+    <None Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[468-565].pdf" />
+    <None Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[566-650].pdf" />
+    <None Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[651-727].pdf" />
+    <None Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[728-781].pdf" />
+    <None Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[782-853].pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\1 Intro.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\10.0_pp_77_88_Supersonic_flows.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\11.0_pp_89_106_Blast_waves.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\12.0_pp_107_127_Bernoullis_equation.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\13.0_pp_128_149_Fluid_instabilities.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\14.0_pp_150_162_Viscous_flows.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\15 Accr.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\16.0_pp_179_199_Plasmas.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\17 Appendices.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\2 Fluids.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\3 Grav.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\4 Energy.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\8 HydEq.pdf" />
+    <None Include="Documents\Textbooks\Clarke Carswell AFD\9 Sound.pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\1 Special.pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\2 Manifolds.pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\3 Vector Calc.pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\4 Tensor Calc.pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\5 Special 2.pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\6 Electromag.pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\7 Equiv.pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\8 Field Eq.pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\9 Schw Geom.pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\hobson rel[247-264].pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\hobson rel[265-304].pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\hobson rel[305-326].pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\hobson rel[327-371].pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\hobson rel[372-402].pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\hobson rel[403-444].pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\hobson rel[445-483].pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\hobson rel[484-514].pdf" />
+    <None Include="Documents\Textbooks\Hobson Relativity\hobson rel[515-540].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[015-038].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[039-063].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[064-094].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[095-114].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[115-142].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[143-171].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[172-201].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[202-222].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[223-244].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[245-290].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[291-345].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[346-384].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[385-414].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[415-434].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[435-451].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[452-482].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[483-555].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[556-606].pdf" />
+    <None Include="Documents\Textbooks\Landau Lifshitz Quantum\[607-624].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[020-119].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[120-167].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[168-219].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[220-236].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[238-274].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[276-347].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[348-421].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[422-450].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[452-487].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[488-526].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[530-548].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[550-558].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[560-564].pdf" />
+    <None Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[566-582].pdf" />
+    <None Include="Documents\Useful Proofs\Relativity\Superluminal motion.pdf" />
+    <None Include="MakeExamsEasyAgain_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_0_intro_nopause Full Text.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_0_intro_nopause.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_1_orbits_nopause Full Text.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_1_orbits_nopause.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_2_poisson_nopause Full Text.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_2_poisson_nopause.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_3_circular_nopause Full Text.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_3_circular_nopause.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_4_axi_nopause Full Text.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_4_axi_nopause.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_5_coll_nopause Full Text.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_5_coll_nopause.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_6_dfs_nopause Full Text.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_6_dfs_nopause.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_7_clusters_nopause Full Text.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_7_clusters_nopause.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_8_beyondnewton_nopause Full Text.txt" />
+    <Content Include="Documents\Handouts\Dynamics\sdsg19_8_beyondnewton_nopause.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap10 Full Text.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap10.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap2 Full Text.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap2.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap3 Full Text.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap3.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap4 Full Text.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap4.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap5 Full Text.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap5.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap6 Full Text.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap6.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap7 Full Text.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap7.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap8 Full Text.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap8.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap9 Full Text.txt" />
+    <Content Include="Documents\Handouts\Quantum\chap9.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_10__Classic_tests_of_General_Relativity Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_10__Classic_tests_of_General_Relativity.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_11__Schwarzschild_black_holes Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_11__Schwarzschild_black_holes.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_12__Cosmology Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_12__Cosmology.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_1__Recap_of_special_relativity Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_1__Recap_of_special_relativity.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_2__Manifolds_and_coordinates Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_2__Manifolds_and_coordinates.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_3__Vector_and_tensor_algebra Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_3__Vector_and_tensor_algebra.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_4__Vector_and_tensor Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_4__Vector_and_tensor.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_5__Minkowski_spacetime Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_5__Minkowski_spacetime.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_6__Electromagnetism Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_6__Electromagnetism.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_7__Spacetime_curvature Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_7__Spacetime_curvature.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_8__The_gravitational_field_equations Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_8__The_gravitational_field_equations.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_9__The_Schwarzschild_solution Full Text.txt" />
+    <Content Include="Documents\Handouts\Relativity\Topic_9__The_Schwarzschild_solution.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture01 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture01.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture02 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture02.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture03 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture03.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture04 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture04.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture05 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture05.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture06 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture06.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture07 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture07.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture08 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture08.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture09 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture09.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture10 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture10.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture11 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture11.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture12 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture12.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture13 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture13.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture14 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture14.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture15 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture15.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture16 Full Text.txt" />
+    <Content Include="Documents\Handouts\Stars\Lecture16.txt" />
+    <Content Include="Documents\Handouts\Stat Phys\five Full Text.txt" />
+    <Content Include="Documents\Handouts\Stat Phys\five.txt" />
+    <Content Include="Documents\Handouts\Stat Phys\four Full Text.txt" />
+    <Content Include="Documents\Handouts\Stat Phys\four.txt" />
+    <Content Include="Documents\Handouts\Stat Phys\one Full Text.txt" />
+    <Content Include="Documents\Handouts\Stat Phys\one.txt" />
+    <Content Include="Documents\Handouts\Stat Phys\three Full Text.txt" />
+    <Content Include="Documents\Handouts\Stat Phys\three.txt" />
+    <Content Include="Documents\Handouts\Stat Phys\two Full Text.txt" />
+    <Content Include="Documents\Handouts\Stat Phys\two.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-01_TopicsinObeservationalPhysics Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-01_TopicsinObeservationalPhysics.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-02_TopicsinObservationalPhysics Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-02_TopicsinObservationalPhysics.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-03_TopicsinObservationalPhysics Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-03_TopicsinObservationalPhysics.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-04_TopicsinObeservationalAstrophysics Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-04_TopicsinObeservationalAstrophysics.txt" />
+    <Content Include="Documents\Handouts\Topics\lecture-05_TopicsinObservationalAstrophysics Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\lecture-05_TopicsinObservationalAstrophysics.txt" />
+    <Content Include="Documents\Handouts\Topics\lecture-06_TopicsinObservationalAstrophysics Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\lecture-06_TopicsinObservationalAstrophysics.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-07_TopicsinObservationalAstrophysics Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-07_TopicsinObservationalAstrophysics.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-08_TopicsinObservationalAstrophysics Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-08_TopicsinObservationalAstrophysics.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-09_TopicsinObservationalAstrophysics Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Lecture-09_TopicsinObservationalAstrophysics.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics Handout 1.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-10 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-10.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-11 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-11.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-12 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-12.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-13 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-13.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-14 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-14.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-15 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-15.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-16 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-16.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-17 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-17.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-18 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-18.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-19 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-19.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-20 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-20.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-21 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-21.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-22 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-22.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-23 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-23.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-24 Full Text.txt" />
+    <Content Include="Documents\Handouts\Topics\Topics_Lecture-24.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[013-066] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[013-066].txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[067-153] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[067-153].txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[154-285] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[154-285].txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[286-405] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[286-405].txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[406-467] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[406-467].txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[468-565] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[468-565].txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[566-650] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[566-650].txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[651-727] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[651-727].txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[728-781] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[728-781].txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[782-853] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Binney Tremaine GalDyn\binney tremaine galdy[782-853].txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\1 Intro Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\1 Intro.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\10.0_pp_77_88_Supersonic_flows Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\10.0_pp_77_88_Supersonic_flows.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\11.0_pp_89_106_Blast_waves Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\11.0_pp_89_106_Blast_waves.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\12.0_pp_107_127_Bernoullis_equation Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\12.0_pp_107_127_Bernoullis_equation.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\13.0_pp_128_149_Fluid_instabilities Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\13.0_pp_128_149_Fluid_instabilities.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\14.0_pp_150_162_Viscous_flows Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\14.0_pp_150_162_Viscous_flows.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\15 Accr Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\15 Accr.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\16.0_pp_179_199_Plasmas Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\16.0_pp_179_199_Plasmas.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\17 Appendices Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\17 Appendices.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\2 Fluids Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\2 Fluids.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\3 Grav Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\3 Grav.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\4 Energy Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\4 Energy.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\8 HydEq Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\8 HydEq.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\9 Sound Full Text.txt" />
+    <Content Include="Documents\Textbooks\Clarke Carswell AFD\9 Sound.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\1 Special Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\1 Special.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\2 Manifolds Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\2 Manifolds.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\3 Vector Calc Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\3 Vector Calc.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\4 Tensor Calc Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\4 Tensor Calc.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\5 Special 2 Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\5 Special 2.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\6 Electromag Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\6 Electromag.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\7 Equiv Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\7 Equiv.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\8 Field Eq Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\8 Field Eq.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\9 Schw Geom Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\9 Schw Geom.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[247-264] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[247-264].txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[265-304] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[265-304].txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[305-326] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[305-326].txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[327-371] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[327-371].txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[372-402] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[372-402].txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[403-444] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[403-444].txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[445-483] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[445-483].txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[484-514] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[484-514].txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[515-540] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Hobson Relativity\hobson rel[515-540].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[015-038] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[015-038].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[039-063] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[039-063].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[064-094] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[064-094].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[095-114] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[095-114].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[115-142] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[115-142].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[143-171] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[143-171].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[172-201] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[172-201].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[202-222] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[202-222].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[223-244] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[223-244].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[245-290] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[245-290].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[291-345] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[291-345].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[346-384] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[346-384].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[385-414] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[385-414].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[415-434] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[415-434].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[435-451] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[435-451].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[452-482] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[452-482].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[483-555] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[483-555].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[556-606] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[556-606].txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[607-624] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Landau Lifshitz Quantum\[607-624].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[020-119] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[020-119].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[120-167] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[120-167].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[168-219] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[168-219].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[220-236] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[220-236].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[238-274] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[238-274].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[276-347] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[276-347].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[348-421] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[348-421].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[422-450] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[422-450].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[452-487] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[452-487].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[488-526] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[488-526].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[530-548] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[530-548].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[550-558] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[550-558].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[560-564] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[560-564].txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[566-582] Full Text.txt" />
+    <Content Include="Documents\Textbooks\Weinberg Cosmology\weinberg cosmology[566-582].txt" />
+    <Content Include="Documents\Useful Proofs\Relativity\Superluminal motion Full Text.txt" />
+    <Content Include="Documents\Useful Proofs\Relativity\Superluminal motion.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documents\Handouts\Astrofluids\" />
+    <Folder Include="Documents\Handouts\Cosmology\" />
+    <Folder Include="Documents\Useful Proofs\Astrofluids\" />
+    <Folder Include="Documents\Useful Proofs\Cosmology\" />
+    <Folder Include="Documents\Useful Proofs\Dynamics\" />
+    <Folder Include="Documents\Useful Proofs\Quantum\" />
+    <Folder Include="Documents\Useful Proofs\Stars\" />
+    <Folder Include="Documents\Useful Proofs\Stat Phys\" />
+    <Folder Include="Documents\Useful Proofs\Topics\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+</Project>
